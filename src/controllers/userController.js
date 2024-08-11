@@ -38,9 +38,9 @@ class UserController {
 
       const newUser = await UsuarioService.cadastrar(data);
 
-      const userResultado = await newUser.save();
+      await newUser.save();
 
-      res.status(201).send(userResultado.toJSON());
+      res.status(201).send({message: "Usuario cadastrado com sucesso"});
     }catch(error){
       next(error);
     }

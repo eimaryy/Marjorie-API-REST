@@ -77,9 +77,9 @@ class ProdutoController {
     try {
       const data = req.body;
       const file = req.file;
-
+      
       if(!file){
-        next(new RequisicaoIncorreta("A imagem do produto deve ser adicionada"));
+        return next(new RequisicaoIncorreta("A imagem do produto deve ser adicionada"));
       }
 
       const produto = new Produto({

@@ -12,9 +12,8 @@ router
   .get("/produto/search/:id", ProdutoController.findProdutoId)
   .get("/produtos/category/:category", ProdutoController.findProdutoCategory, pagination)
   .get("/produtos/search/keyword/:keyword", ProdutoController.findProdutoKeyword, pagination)
-  .post("/produto/create", autenticado, permissoes, upload.single("file"), ProdutoController.createProduto)
+  .post("/produto/create",autenticado, permissoes, upload.single("file"), ProdutoController.createProduto)
   .put("/produto/:id",  autenticado, permissoes, upload.single("file"), ProdutoController.updateProdutoId)
   .delete("/produto/:id", autenticado, permissoes, ProdutoController.deleteProdutoId);
-
 
 export default router;

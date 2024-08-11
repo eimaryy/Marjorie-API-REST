@@ -4,9 +4,9 @@ import User from "../model/UserModel.js";
 
 export const permissoes = async (req, res, next) => {
   const usuarioId = req.usuarioId;
-
+  
   const usuario = await User.findById(usuarioId);
-
+    
   if(!usuario){
     next(new NaoEncontrado());
   }else if(usuario.role === "Cliente"){
