@@ -4,6 +4,9 @@
   "description": "Api rest de Marjorie`s beauty",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": ">=21.6.2"
+  },
   "scripts": {
     "dev": "nodemon ./src/config/server.js",
     "start": "node ./src/config/server.js",
