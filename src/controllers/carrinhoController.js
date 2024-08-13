@@ -8,7 +8,7 @@ class CarrinhoController {
   static addItemCarrinho = async (req, res, next) => {
     try{
       const usuarioId = req.usuarioId;
-      const { produtoId } = req.body;
+      const produtoId = req.params.id;
     
       const produto = await Produto.findById(produtoId);
 
@@ -55,7 +55,7 @@ class CarrinhoController {
   static deleteItemCarrinho = async (req, res, next) => {
     try{
       const usuarioId = req.usuarioId;
-      const { produtoId } = req.body;
+      const produtoId = req.params.id;
 
       const carrinhoExistente = await Carrinho.findOne({ userId: usuarioId });
 
