@@ -1,4 +1,4 @@
-import Carrinho from "../model/carrinhoModel.js";
+import Carrinho from "../model/CarrinhoModel.js";
 import NaoEncontrado from "../error/NaoEncontrado.js";
 
 class CarrinhoService {
