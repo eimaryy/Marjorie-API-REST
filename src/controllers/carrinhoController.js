@@ -1,4 +1,4 @@
-import Carrinho from "../model/carrinhoModel.js";
+import Carrinho from "../model/CarrinhoModel.js";
 import NaoEncontrado from "../error/NaoEncontrado.js";
 import Produto from "../model/ProdutoModel.js";
 import CarrinhoService from "../services/carrinhoService.js";
